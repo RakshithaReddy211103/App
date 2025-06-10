@@ -1,0 +1,20 @@
+package test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import main.App;
+public class AppTest {
+    @Test
+    public void testlogin1() {
+        App myapp1 = new App();
+        int result = myapp1.userLogin("society", "123");
+        System.out.println("testlogin1 - Login result: " + result);
+        Assert.assertEquals(result, 0);
+        }
+    @Test
+    public void testlogin2() {
+        App myapp2 = new App();
+        int result = myapp2.userLogin("society", "123");
+        System.out.println("testlogin2 - Login result: " + result);
+        Assert.assertEquals(result, 0);
+    }
+}
